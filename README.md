@@ -31,9 +31,9 @@
    pip install -r requirements.txt
    ```
 
-2. **Run the OSV Scanner** to check for vulnerabilities:
+2. **Run the Endor Scan** to check for vulnerabilities:
    ```sh
-   ./osv-scanner scan --lockfile requirements.txt
+   ./endorctl scan --quick-scan
    ```
 
 3. **Upgrade TensorFlow to 2.14.0 in the requirements.txt file**:
@@ -62,8 +62,7 @@
 Make sure to check your work by running:
 
 ```sh
-pip freeze > requirements.txt
-./osv-scanner scan --lockfile requirements.txt
+./endorctl scan --quick-scan
 ```
 
 ## What This Teaches You

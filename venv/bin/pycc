@@ -1,3 +1,0 @@
-#!/workspaces/numpy_example/venv/bin/python3
-from numba.pycc import main
-main()
