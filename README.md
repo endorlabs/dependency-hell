@@ -32,11 +32,22 @@
    ```
 
 2. **Run the Endor Scan** to check for vulnerabilities:
+
+   - Initialize Endor Labs
+     Run the following command to authenticate with Endor Labs and set up your environment:
+     
+   ```sh
+   ./endorctl init --auth-mode <mode> --headless-mode
+   ```
+
+  - Replace <mode> with your preferred authentication mode (e.g., google, github, etc.).
+
    ```sh
    ./endorctl scan --quick-scan
    ```
 
-3. **Upgrade TensorFlow to 2.14.0 in the requirements.txt file**:
+4. **Upgrade TensorFlow to 2.14.0 in the requirements.txt file**:
+   
    ```sh
    tensorflow==2.14.0
    ```
@@ -47,7 +58,7 @@
    pip install --force-reinstall -r requirements.txt
    ```
 
-4. **Solve conflicts manually**:
+6. **Solve conflicts manually**:
    - **Check error messages**—they often tell you which packages have conflicts.
    - **Modify `requirements.txt`** —try adjusting package versions to find a working set.
    - **Use `pip install --upgrade <package>` carefully**—some dependencies need manual intervention to align with the correct versions.
@@ -56,7 +67,7 @@
    - **Test frequently**—after each change, verify that your application still works.
    - Try to use ChatGPT (that counts as manual nowadays)
 
-6. **The person who reduces vulnerabilities the most in 15 minutes wins.**
+7. **The person who reduces vulnerabilities the most in 15 minutes wins.**
 
 
 Make sure to check your work by running:
